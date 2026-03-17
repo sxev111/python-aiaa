@@ -1,15 +1,14 @@
-# Configuration for AI Assistant Application
+import os
+from dotenv import load_dotenv
 
-# API Key for AI Services
-API_KEY = 'your_api_key_here'
+load_dotenv()
 
-# Model settings
-MODEL_NAME = 'gpt-3'
-
-# Logging settings
-LOG_LEVEL = 'info'
-LOG_FILE = 'assistant.log'
-
-# Other configurations
-MAX_TOKENS = 150
+# OpenAI API Configuration
+API_KEY = os.getenv("OPENAI_API_KEY", "your-api-key-here")
+MODEL = "gpt-3.5-turbo"  # or "gpt-4" for better results
 TEMPERATURE = 0.7
+
+# Desktop App Configuration
+WINDOW_WIDTH = 800
+WINDOW_HEIGHT = 600
+APP_TITLE = "Python AI Assistant"
